@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, Children } from "react";
+import { useState } from "react";
 
 export default function Client({ children }: { children: React.ReactNode }) {
   const [showContent, setShowContent] = useState(false);
@@ -20,6 +20,7 @@ export default function Client({ children }: { children: React.ReactNode }) {
     color: "white",
     cursor: "pointer",
     border: "none",
+    fontSize: "1.5rem",
     borderRadius: "6px",
     marginBottom: "10px",
   };
