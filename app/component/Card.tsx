@@ -3,18 +3,13 @@ import Image from "next/image";
 
 export default function Card({ image, firstName, lastName, email }: any) {
   const cardStyle = {
-    
     width: "300px",
     border: "1px solid #ddd",
     borderRadius: "8px",
     overflow: "hidden",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
     marginBottom: "20px",
-  };
-
-  const contentStyle = {
-    padding: "16px",
-    textAlign: "center",
+    padding: "5px",
   };
 
   const nameStyle = {
@@ -31,11 +26,16 @@ export default function Card({ image, firstName, lastName, email }: any) {
   return (
     <div style={cardStyle}>
       <Image src={image} width={100} height={100} alt="img" />
-      <div>
+      <div
+        style={{
+          textAlign: "left",
+          padding: "10px 0 10px 15px",
+        }}
+      >
         <div style={nameStyle}>
-          {firstName} {lastName}
+          Name: {firstName} {lastName}
         </div>
-        <div style={emailStyle}>{email}</div>
+        <div style={emailStyle}>Email: {email}</div>
       </div>
     </div>
   );

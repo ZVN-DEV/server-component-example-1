@@ -4,9 +4,9 @@ async function PostTitle() {
   const data = await fetch("https://dummyjson.com/users");
   const postsResponse = await data.json();
   const posts = postsResponse.users;
-  const mappedPosts = posts.map((post: any) => {
-    return post;
-  });
+  // const mappedPosts = posts.map((post: any) => {
+  //   return post;
+  // });
 
   const gridContainerStyle = {
     display: "grid",
@@ -18,7 +18,7 @@ async function PostTitle() {
   return (
     <>
       <div style={gridContainerStyle}>
-        {mappedPosts.map((p: any) => (
+        {posts.map((p: any) => (
           <Card
             key={p.id}
             image={p.image}
